@@ -1,7 +1,7 @@
-import React from 'react'
-import {Layout} from '../components/Layout'
+import React from "react"
+import { Layout } from "../components/Layout"
 
-export const about = () => {
+const about = () => {
   return (
     <Layout>
       <div>
@@ -10,3 +10,5 @@ export const about = () => {
     </Layout>
   )
 }
+
+export default about
