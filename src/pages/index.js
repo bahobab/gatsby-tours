@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import { Layout } from "../components/Layout"
 // import SimpleHero from "../components/SimpleHero"
@@ -16,9 +17,9 @@ export default ({ data }) => (
           title="Continue exploring"
           info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores qui dolorem reiciendis numquam velit in, alias ab excepturi corporis est?"
         >
-          <Link className="btn-white" to="/tours">
+          <AniLink fade className="btn-white" to="/tours">
             Explore Tours
-          </Link>
+          </AniLink>
         </Banner>
       </StyledHero>
       <About />

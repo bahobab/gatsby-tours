@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+// import { Link } from "gatsby"
 
 import Banner from "../components/Banner"
 import { Layout } from "../components/Layout"
@@ -13,9 +14,9 @@ const Error = () => {
           title="Page not found"
           info="Ooops! You've place yourself in a cul-de-sac."
         >
-          <Link to="/" className="btn-white">
+          <AniLink fade to="/" className="btn-white">
             Return to home page...
-          </Link>
+          </AniLink>
         </Banner>
       </header>
     </Layout>
