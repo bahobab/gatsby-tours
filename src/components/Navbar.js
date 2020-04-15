@@ -14,7 +14,6 @@ export const Navbar = () => {
   const toggleNavOpen = () => {
     setNavOpen(isNavOpen => !isNavOpen)
   }
-  console.log(isNavOpen)
   return (
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
