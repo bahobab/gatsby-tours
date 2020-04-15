@@ -4,17 +4,17 @@ import { Link, graphql } from "gatsby"
 import { Layout } from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 
-const contact = ({ data }) => {
+const blog = ({ data }) => {
   return (
     <Layout>
-      <StyledHero img={data.contactBcg.childImageSharp.fluid} />
+      <StyledHero img={data.blogBcg.childImageSharp.fluid} />
     </Layout>
   )
 }
 
 export const query = graphql`
   query {
-    contactBcg: file(relativePath: { eq: "connectBcg.jpeg" }) {
+    blogBcg: file(relativePath: { eq: "blogBcg.jpeg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
@@ -24,4 +24,4 @@ export const query = graphql`
   }
 `
 
-export default contact
+export default blog
