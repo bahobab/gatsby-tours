@@ -40,6 +40,10 @@ p {
   margin-bottom: 1.25rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 main {
   min-height: 100vh;
   display: flex;

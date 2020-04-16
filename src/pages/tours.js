@@ -1,16 +1,18 @@
 import React, { Component } from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import { Layout } from "../components/Layout"
 
 // import Header from "../examples/RegularHeader"
 import StyledHero from "../components/StyledHero"
+import Tours from "../components/Tours/Tours"
 
-export default class Tours extends Component {
+export default class tours extends Component {
   render() {
     return (
       <Layout>
         <StyledHero img={this.props.data.defaultBcg.childImageSharp.fluid} />
+        <Tours />
       </Layout>
     )
   }
