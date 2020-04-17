@@ -19,8 +19,26 @@ const Blog = ({ data }) => {
         return (
           <div className="rich">
             <h3>This is an Awesome image</h3>
-            <img width="400" src={node.data.target.fields.file["en-US"].url} />
+            <img
+              width="400"
+              src={node.data.target.fields.file["en-US"].url}
+              alt="post"
+            />
             <p>Image provided by john doe</p>
+          </div>
+        )
+      },
+
+      "embedded-entry-block": node => {
+        const { title, image, text } = node.target.fields
+        return (
+          <div>
+            <h1>This is another post: {title}</h1>
+            <img
+              src={image["en-US"].fields.file["en-US"].url}
+              alt="embedded post"
+            />
+            documentToReactComponents(text["en-US"])
           </div>
         )
       },
