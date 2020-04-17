@@ -9,10 +9,15 @@ import About from "../components/Home/About"
 import Services from "../components/Home/Services"
 import StyledHero from "../components/StyledHero"
 import FeaturedTours from "../components/Home/FeaturedTours"
+import SEO from "../components/SEO"
 
 export default ({ data }) => (
   <div>
     <Layout>
+      <SEO
+        title="Fun Chicago Tours"
+        description="Enjoy a unique visit in Chicago"
+      />
       <StyledHero home={true} img={data.defaultBcg.childImageSharp.fluid}>
         <Banner
           title="Continue exploring"

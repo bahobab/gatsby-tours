@@ -15,11 +15,9 @@ module.exports = {
     description:
       "Discover the world that you never thought existed. Look into the other direction and project yourself in your dream world!",
     author: "Mamadou & Bineta",
-    data: {
-      name: "Polo",
-      age: 22,
-      sexe: "male",
-    },
+    twitterUsername: "@mamadou&bineta",
+    image: "/defaultBcg.jpeg",
+    siteUrl: "https://chitours.netlify.app",
   },
   plugins: [
     `gatsby-plugin-sass`,
