@@ -8,6 +8,7 @@ import { Layout } from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import Day from "../components/SingleTour/Day"
 import styles from "../css/template.module.css"
+import SEO from "../components/SEO"
 
 const Template = ({ data }) => {
   const {
@@ -25,6 +26,7 @@ const Template = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={name} />
       <StyledHero img={mainImage.fluid} />
       <section className={styles.template}>
         <div className={styles.center}>
