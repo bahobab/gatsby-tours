@@ -33,7 +33,7 @@ export const Footer = () => {
         })}
       </div>
       <div className={styles.copyright}>
-        copyright &copy; {new Date().getFullYear()} Backroads - All rights
+        copyright &copy; {new Date().getFullYear()} CH!TROEN - All rights
         reserved
       </div>
     </footer>

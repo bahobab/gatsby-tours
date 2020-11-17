@@ -1,23 +1,26 @@
 import React from "react"
-import { FaTree, FaWallet, FaSocks } from "react-icons/fa"
+import { FaHeart, FaTheaterMasks, FaMoneyCheckAlt } from "react-icons/fa"
 
 export default [
   {
-    icon: <FaWallet />,
+    icon: <FaMoneyCheckAlt />,
     title: "Save money",
     text:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores qui dolorem reiciendis numquam velit in, alias ab excepturi corporis est?",
+      "Memories are priceless. Your deserve few great ones, and this is our focus, not " +
+      "just make a buck",
   },
   {
-    icon: <FaTree />,
-    title: "Endless hiking",
+    icon: <FaTheaterMasks />,
+    title: "Joie de vivre",
     text:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores qui dolorem reiciendis numquam velit in, alias ab excepturi corporis est?",
+      "We make our tours so joyful you will probabily discover the real meaning of life" +
+      ": to be happy and we hope you share with us",
   },
   {
-    icon: <FaSocks />,
-    title: "Amazing comfort",
+    icon: <FaHeart />,
+    title: "Love Chicago for ever",
     text:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores qui dolorem reiciendis numquam velit in, alias ab excepturi corporis est?",
+      "Chicago will seduce you. We are just here to facilitate your unique experience. " +
+      "And we know you will always want to come back for more?",
   },
 ]

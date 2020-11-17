@@ -25,12 +25,8 @@ function Tour({ tour }) {
 
   const { name, price, country, slug, days, images } = tour
 
-  // let mainImage
-  // if (images) {
-  //   mainImage = images[0].fluid
-  // } else {
-  //   mainImage = img
-  // }
+  // let mainImage if (images) {   mainImage = images[0].fluid } else { mainImage
+  // = img }
 
   let mainImage = images ? images[0].fluid : img
 
@@ -52,11 +48,13 @@ function Tour({ tour }) {
         <div className={styles.info}>
           <h4 className={styles.country}>
             {country}
-            <FaMap className={styles.icon} />
-            {country || "default country"}
+            <FaMap className={styles.icon} /> {country || "default country"}
           </h4>
           <div className={styles.details}>
-            <h6>{days} days</h6>
+            <h6>
+              {days}
+              hours
+            </h6>
             <h6>from ${price}</h6>
           </div>
         </div>

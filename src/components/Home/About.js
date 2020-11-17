@@ -8,10 +8,10 @@ import styles from "../../css/about.module.css"
 
 const getImages = graphql`
   query aboutImage {
-    aboutImage: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+    aboutImage: file(relativePath: { eq: "frontRowSeat.jpeg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -22,7 +22,7 @@ const About = () => {
   const { aboutImage } = useStaticQuery(getImages)
   return (
     <section className={styles.about}>
-      <Title title="About" subtitle="us" />
+      <Title title="About" subtitle="ChiTours" />
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
@@ -31,17 +31,17 @@ const About = () => {
           </div>
         </article>
         <article className={styles.aboutInfo}>
-          <h4>Explore the difference</h4>
+          <h4>You are Special</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-            qui dolorem reiciendis numquam velit in, alias ab excepturi corporis
-            est?
+            After touring Chicago with us your will be a transformed as a happy
+            world citizen. Discover the unique, rich and amazing faces of the
+            city of Chicago that you can ONLY see in a Citroen 2CV Charleston.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-            qui dolorem reiciendis numquam velit in, alias ab excepturi corporis
-            est?
+            I you want have made it to Chicago then it belongs to us to make you
+            happy with an unforgetable souvenir that no one else will provide.
           </p>
+          <p>We have your front row seat ready for you!</p>
           <button type="button" className="btn-primary">
             Read More
           </button>

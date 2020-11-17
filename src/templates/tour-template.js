@@ -1,16 +1,16 @@
 import React from "react"
-import { graphql } from "gatsby"
+import {graphql} from "gatsby"
 import Image from "gatsby-image"
-import { FaMoneyBillWave, FaMap } from "react-icons/fa"
+import {FaMoneyBillWave, FaMap} from "react-icons/fa"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import { Layout } from "../components/Layout"
+import {Layout} from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import Day from "../components/SingleTour/Day"
 import styles from "../css/template.module.css"
 import SEO from "../components/SEO"
 
-const Template = ({ data }) => {
+const Template = ({data}) => {
   const {
     name,
     price,
@@ -19,47 +19,47 @@ const Template = ({ data }) => {
     start,
     images,
     journey,
-    description: { description },
+    description: {
+      description
+    }
   } = data.tour
 
-  const [mainImage, ...tourImages] = images
+  const [mainImage,
+    ...tourImages] = images
 
   return (
     <Layout>
-      <SEO title={name} />
-      <StyledHero img={mainImage.fluid} />
+      <SEO title={name}/>
+      <StyledHero img={mainImage.fluid}/>
       <section className={styles.template}>
         <div className={styles.center}>
           <div className={styles.images}>
             {tourImages.map((item, index) => {
-              return (
-                <Image
-                  key={index}
-                  fluid={item.fluid}
-                  alt="single image"
-                  className={styles.image}
-                />
-              )
+              return (<Image
+                key={index}
+                fluid={item.fluid}
+                alt="single image"
+                className={styles.image}/>)
             })}
           </div>
           <h2>{name}</h2>
           <div className={styles.info}>
             <p>
-              <FaMoneyBillWave className={styles.icon} />
+              <FaMoneyBillWave className={styles.icon}/>
               starting from ${price}
             </p>
             <p>
-              <FaMap className={styles.icon} />
-              {country}
+              <FaMap className={styles.icon}/> {country}
             </p>
           </div>
           <h4>starts on: {start}</h4>
-          <h4>duration: {days} days</h4>
+          <h4>duration: {days}
+            days</h4>
           <p className={styles.desc}>{description}</p>
           <h2>Schedule:</h2>
           <div className={styles.journey}>
             {journey.map((item, index) => {
-              return <Day key={index} day={item.day} info={item.info} />
+              return <Day key={index} day={item.day} info={item.info}/>
             })}
           </div>
           <AniLink fade to={"/tours"} className="btn-primary">
@@ -73,7 +73,7 @@ const Template = ({ data }) => {
 
 export default Template
 
-export const query = graphql`
+export const query = graphql `
   query($slug: String!) {
     tour: contentfulTour(slug: { eq: $slug }) {
       name
